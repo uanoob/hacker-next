@@ -1,0 +1,18 @@
+{
+  "name": "hacker-next",
+  "version": "1.0.0",
+  "description": "A Hacker News clone with Next.js",
+  "main": "server.js",
+  "scripts": {
+    "dev": "next"
+  },
+  "repository": "git@github.com:uanoob/hacker-next.git",
+  "author": "uanoob",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "next": "^9.1.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
