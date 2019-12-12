@@ -4,7 +4,9 @@
   "description": "A Hacker News clone with Next.js",
   "main": "server.js",
   "scripts": {
-    "dev": "next"
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js",
+    "build": "next build"
   },
   "repository": "git@github.com:uanoob/hacker-next.git",
   "author": "uanoob",
@@ -14,6 +16,7 @@
     "isomorphic-fetch": "^2.2.1",
     "next": "^9.1.5",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "sw-precache-webpack-plugin": "^0.11.5"
   }
 }
