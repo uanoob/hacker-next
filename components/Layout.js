@@ -1,8 +1,9 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import Router from 'next/router';
 
-const Layout = ({ children, title, description }) => (
+const Layout = ({ children, title, description, backButton }) => (
   <Fragment>
     <Head>
       <title>{title}</title>
@@ -10,6 +11,15 @@ const Layout = ({ children, title, description }) => (
     </Head>
     <div className='container'>
       <nav>
+        {backButton && (
+          <span
+            type={'button'}
+            className={'back-button'}
+            onClick={() => Router.back()}
+          >
+            &#x2b05;
+          </span>
+        )}
         <Link href='/'>
           <a>
             <span className='main-title'>Hacker Next</span>
@@ -38,6 +48,13 @@ const Layout = ({ children, title, description }) => (
         }
         nav .main-title {
           font-weight: bold;
+        }
+        nav .back-button {
+          font-size: 0.9rem;
+          padding-right: 1em;
+        }
+        nav .back-button:hover {
+          cursor: pointer;
         }
       `}
     </style>
